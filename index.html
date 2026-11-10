@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Территория безопасности — образовательный ресурс для молодёжи о профилактике терроризма, цифровой грамотности и безопасном поведении.">
+  <title>Территория безопасности</title>
+  <style>
+    :root{--navy:#10243d;--navy2:#183653;--teal:#36c6b0;--ink:#172638;--muted:#64748b;--paper:#f4f7fb;--white:#fff;--line:#e3eaf1;--shadow:0 14px 40px rgba(16,36,61,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(16,36,61,.96);backdrop-filter:blur(12px);color:white;border-bottom:1px solid rgba(255,255,255,.1)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}.brand-mark{width:38px;height:38px;border-radius:12px;background:var(--teal);color:var(--navy);display:grid;place-items:center;font-size:21px}.nav-links{display:flex;gap:22px;align-items:center;font-size:14px;color:#d7e3ee}.nav-links a:hover{color:var(--teal)}.menu-btn{display:none;background:none;border:1px solid #547087;color:white;border-radius:9px;padding:8px 12px;font-size:18px}
+    .hero{background:radial-gradient(circle at 80% 20%,#285577 0,transparent 32%),linear-gradient(125deg,var(--navy),#173b59);color:white;padding:86px 0 78px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#9ce9df;background:rgba(54,198,176,.12);border:1px solid rgba(54,198,176,.28);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-1.8px;margin:20px 0}.hero p{color:#d1deea;font-size:18px;max-width:610px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 19px;font-weight:750;cursor:pointer;transition:.2s}.btn-primary{background:var(--teal);color:#10243d}.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn-outline{border:1px solid #6d879d;color:white;background:transparent}.hero-art{min-height:310px;display:grid;place-items:center;position:relative}.shield{width:240px;height:270px;clip-path:polygon(50% 0,94% 17%,88% 67%,50% 100%,12% 67%,6% 17%);background:linear-gradient(145deg,#53ddc8,#1d9d9a);display:grid;place-items:center;color:#10304a;font-size:104px;filter:drop-shadow(0 22px 30px rgba(0,0,0,.25));position:relative}.orbit{position:absolute;width:330px;height:330px;border:1px solid rgba(159,228,223,.24);border-radius:50%}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(159,228,223,.18);border-radius:50%}.orbit:before{inset:25px}.orbit:after{inset:55px}.hero-note{position:absolute;bottom:4px;right:0;background:white;color:var(--navy);padding:13px 17px;border-radius:14px;box-shadow:var(--shadow);font-size:13px;font-weight:750}
+    section{padding:76px 0}.section-head{max-width:690px;margin-bottom:34px}.kicker{color:#159b8c;text-transform:uppercase;letter-spacing:1.4px;font-size:12px;font-weight:800}.section-head h2{font-size:clamp(28px,3.5vw,40px);line-height:1.15;letter-spacing:-.8px;margin:10px 0}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 5px 20px rgba(16,36,61,.035)}.card-icon{width:48px;height:48px;border-radius:14px;background:#e7f8f5;color:#138e81;display:grid;place-items:center;font-size:24px;margin-bottom:17px}.card h3{margin:0 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}.history{background:#eaf0f6}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.era{background:white;border-radius:18px;padding:24px;border-top:4px solid var(--teal);box-shadow:var(--shadow)}.era-year{font-size:13px;color:#159b8c;font-weight:800;letter-spacing:1px}.era h3{margin:7px 0 9px}.era p{margin:0;color:var(--muted);font-size:14px}.notice{margin-top:18px;padding:15px 18px;background:#fff8e8;border:1px solid #f3dfad;border-radius:12px;color:#765a1d;font-size:13px}
+    .safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.safety-item{display:flex;gap:16px;background:white;padding:22px;border:1px solid var(--line);border-radius:16px}.safety-item .num{flex:0 0 36px;height:36px;border-radius:11px;background:var(--navy);color:white;display:grid;place-items:center;font-weight:800}.safety-item h3{margin:0 0 5px;font-size:17px}.safety-item p{margin:0;color:var(--muted);font-size:14px}.digital{background:var(--navy);color:white}.digital .section-head p{color:#c3d1de}.digital .kicker{color:#6ee0d0}.digital .card{background:#1a3854;border-color:#31506a}.digital .card p{color:#c4d2df}.digital .card-icon{background:#24516a;color:#75e1d2}
+    .quiz-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}.quiz-intro{background:linear-gradient(145deg,#14314e,#1e5267);color:white;border-radius:20px;padding:28px}.quiz-intro p{color:#d2e1ec}.quiz{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}.question{font-weight:750;font-size:18px;margin:0 0 16px}.option{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:12px;margin:9px 0;cursor:pointer}.option:hover{border-color:var(--teal);background:#f4fcfa}.option input{margin-top:5px;accent-color:#159b8c}.quiz button{margin-top:12px}.feedback{margin-top:14px;font-weight:700}.contacts{background:#eaf0f6}.contact-box{background:white;border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;justify-content:space-between;gap:25px;align-items:center}.contact-box p{margin:5px 0 0;color:var(--muted);font-size:14px}.emergency{font-size:28px;font-weight:850;color:#138e81;white-space:nowrap}footer{background:#0c1d31;color:#b9c9d7;padding:28px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner strong{color:white}
+    @media(max-width:850px){.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#10243d;padding:18px 22px 24px;flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.menu-btn{display:block}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:260px}.shield{width:190px;height:215px;font-size:82px}.orbit{width:280px;height:280px}.hero-note{right:12%}.cards,.timeline{grid-template-columns:1fr 1fr}.quiz-wrap{grid-template-columns:1fr}}
+    @media(max-width:560px){.container{width:min(100% - 28px,1120px)}.hero{padding:60px 0}.hero p{font-size:16px}.hero-art{min-height:230px}.shield{width:160px;height:185px;font-size:70px}.orbit{width:235px;height:235px}.hero-note{right:0;font-size:11px}.cards,.timeline,.safety-grid{grid-template-columns:1fr}section{padding:58px 0}.contact-box{align-items:flex-start;flex-direction:column}.emergency{font-size:25px}.quiz,.quiz-intro{padding:21px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="brand-mark">◆</span><span>ТЕРРИТОРИЯ<br>БЕЗОПАСНОСТИ</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Основная навигация">
+        <a href="#about">О проекте</a><a href="#history">История</a><a href="#safety">Безопасность</a><a href="#digital">Интернет</a><a href="#quiz">Тест</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">✦ Образовательный проект для молодёжи</span>
+          <h1>Твой выбор —<br><span style="color:#67ddcc">безопасность.</span></h1>
+          <p>Знай, думай, проверяй. Здесь собраны понятные материалы о профилактике терроризма, безопасном поведении и защите от опасных манипуляций.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#about">Изучить материалы&nbsp; →</a><a class="btn btn-outline" href="#quiz">Пройти тест</a></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="shield">✓</div><div class="hero-note">Знания помогают защитить себя и других</div></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><span class="kicker">О проекте</span><h2>Безопасность начинается со знаний</h2><p>Ресурс создан для школьников, студентов и всех, кто хочет лучше понимать современные угрозы и знать, как действовать ответственно.</p></div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">📘</div><h3>Понимать</h3><p>Разбираться в понятиях терроризма и экстремизма, отличать факты от слухов и мифов.</p></article>
+          <article class="card"><div class="card-icon">🛡️</div><h3>Предупреждать</h3><p>Знать общие правила личной безопасности и понимать, куда обратиться за помощью.</p></article>
+          <article class="card"><div class="card-icon">🤝</div><h3>Поддерживать</h3><p>Не оставаться равнодушным, уважать других и сообщать о реальной угрозе ответственным взрослым или службам.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="history" id="history">
+      <div class="container">
+        <div class="section-head"><span class="kicker">Историческая справка</span><h2>Терроризм в истории</h2><p>Три примера событий разных столетий, которые повлияли на общество и отношение к вопросам безопасности.</p></div>
+        <div class="timeline">
+          <article class="era"><div class="era-year">XIX ВЕК · 1881</div><h3>Убийство Александра II</h3><p>1 марта 1881 года в Санкт-Петербурге участники организации «Народная воля» совершили покушение на императора Александра II. Он получил смертельные ранения и скончался в тот же день.</p></article>
+          <article class="era"><div class="era-year">XX ВЕК · 2001</div><h3>Теракты 11 сентября</h3><p>11 сентября 2001 года участники «Аль-Каиды» захватили четыре пассажирских самолёта. Нападения в США привели к гибели почти 3 000 человек и изменили международную политику безопасности.</p></article>
+          <article class="era"><div class="era-year">XXI ВЕК · 2015</div><h3>Теракты в Париже</h3><p>13 ноября 2015 года серия скоординированных нападений произошла в нескольких местах Парижа. Погибли 130 человек; ответственность взяла на себя террористическая организация ИГИЛ.</p></article>
+        </div>
+        <div class="notice">Исторические примеры приведены в образовательных целях. Материал не описывает способы совершения нападений и не оправдывает насилие.</div>
+      </div>
+    </section>
+
+    <section id="safety">
+      <div class="container">
+        <div class="section-head"><span class="kicker">Личная безопасность</span><h2>Как действовать ответственно</h2><p>Несколько базовых правил, которые важно помнить в общественных местах и при возникновении опасной ситуации.</p></div>
+        <div class="safety-grid">
+          <article class="safety-item"><span class="num">1</span><div><h3>Не трогай подозрительные предметы</h3><p>Не приближайся, не перемещай и не пытайся самостоятельно осмотреть неизвестный предмет. Предупреди окружающих и сообщи службам.</p></div></article>
+          <article class="safety-item"><span class="num">2</span><div><h3>Следуй указаниям специалистов</h3><p>При эвакуации сохраняй спокойствие, не задерживайся за вещами и выполняй инструкции сотрудников экстренных служб.</p></div></article>
+          <article class="safety-item"><span class="num">3</span><div><h3>Не распространяй слухи</h3><p>Проверяй сообщения по официальным источникам. Не публикуй непроверенные сведения, фото пострадавших и детали работы служб.</p></div></article>
+          <article class="safety-item"><span class="num">4</span><div><h3>Обратись за помощью</h3><p>Если заметил непосредственную угрозу, отойди в безопасное место и сообщи взрослому, охране или экстренным службам.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="digital" id="digital">
+      <div class="container">
+        <div class="section-head"><span class="kicker">Цифровая грамотность</span><h2>Безопасность в интернете</h2><p>Онлайн-общение должно оставаться безопасным. Важно замечать манипуляции, подозрительные предложения и попытки вовлечения в опасную деятельность.</p></div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">🔍</div><h3>Проверяй информацию</h3><p>Сверяй новости с несколькими надёжными источниками. Не доверяй эмоциональным сообщениям без подтверждений.</p></article>
+          <article class="card"><div class="card-icon">⚠️</div><h3>Замечай давление</h3><p>Будь осторожен, если незнакомец требует секретности, подталкивает к незаконным действиям или обещает лёгкое вознаграждение.</p></article>
+          <article class="card"><div class="card-icon">💬</div><h3>Не оставайся один</h3><p>Прекрати подозрительное общение, сохрани сообщения, не вступая в конфликт, и расскажи доверенному взрослому или специалисту.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz">
+      <div class="container quiz-wrap">
+        <div class="quiz-intro"><span class="kicker">Проверь себя</span><h2>Знания — твоя опора</h2><p>Ответь на вопрос и проверь, насколько хорошо ты усвоил основные правила цифровой и личной безопасности.</p><p><strong>Важно:</strong> тест учебный и не заменяет инструкции экстренных служб.</p></div>
+        <div class="quiz">
+          <p class="question">Незнакомый человек в интернете предлагает деньги за выполнение подозрительного поручения и просит никому не рассказывать. Как поступить?</p>
+          <label class="option"><input type="radio" name="answer" value="a"> Согласиться, чтобы узнать подробности.</label>
+          <label class="option"><input type="radio" name="answer" value="b"> Прекратить контакт, сохранить переписку и сообщить доверенному взрослому или соответствующей службе.</label>
+          <label class="option"><input type="radio" name="answer" value="c"> Переслать предложение друзьям, чтобы они тоже попробовали.</label>
+          <button class="btn btn-primary" id="checkAnswer">Проверить ответ</button>
+          <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="help">
+      <div class="container">
+        <div class="section-head"><span class="kicker">Помощь и поддержка</span><h2>В экстренной ситуации</h2><p>Если существует непосредственная опасность, не пытайся разобраться самостоятельно — перейди в безопасное место и обратись за помощью.</p></div>
+        <div class="contact-box"><div><h3 style="margin:0">Единый номер экстренной помощи в странах ЕС</h3><p>Номер 112 доступен бесплатно. В других странах используй местный номер экстренных служб.</p></div><div class="emergency">112</div></div>
+        <p style="color:#64748b;font-size:12px;margin:14px 2px 0">Для школьников и студентов: также можно обратиться к родителям, преподавателю, школьному психологу или администрации учебного заведения.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div><strong>Территория безопасности</strong><br>Образовательный проект для молодёжи</div><div>Знай. Думай. Проверяй. Действуй.</div><div>© <span id="year"></span> · Учебный информационный ресурс</div></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const opened=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(opened));menuBtn.textContent=opened?'✕':'☰'});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('checkAnswer').addEventListener('click',()=>{
+      const selected=document.querySelector('input[name="answer"]:checked');
+      const feedback=document.getElementById('feedback');
+      if(!selected){feedback.textContent='Сначала выбери один из вариантов.';feedback.style.color='#a16207';return;}
+      if(selected.value==='b'){feedback.textContent='Верно! Не вступай в контакт и обратись за помощью.';feedback.style.color='#138e63';}
+      else{feedback.textContent='Это небезопасно. Правильный ответ — вариант 2: прекратить контакт и сообщить о подозрительном предложении.';feedback.style.color='#b45309';}
+    });
+  </script>
+</body>
+</html>
